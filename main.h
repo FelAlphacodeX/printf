@@ -103,6 +103,8 @@ unsigned int print_string_width(buffer_t *output,
 		unsigned char flags, int wid, int prec, int size);
 unsigned int print_neg_width(buffer_t *output, unsigned int printed,
 		unsigned char flags, int wid);
+unsigned int (*f)(va_list, buffer_t *,
+	       	unsigned char, int, int, unsigned char);
 
 /* Helper Functions */
 buffer_t *init_buffer(void);
